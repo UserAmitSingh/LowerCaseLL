@@ -1,0 +1,2 @@
+I have gone over all methods and classes, and I fixed all broken methods. Each class and method is working as expected, and we do not have
+extra methods [toString() and equals() do not count as extras]. All that is left, is to make comments.
