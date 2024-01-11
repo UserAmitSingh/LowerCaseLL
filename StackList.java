@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public class StackList implements Stack{
 	private LinkedList list;
 	
+	public StackList() {
+		list = new LinkedList();
+	}
+	
 	@Override
 	public boolean isEmpty() {
 		return list.isEmpty();
@@ -13,7 +17,7 @@ public class StackList implements Stack{
 	@Override
 	public Object push(Object e) {
 		list.addFront(e);
-		return null;
+		return e;
 	}
 	
 	@Override
@@ -36,8 +40,7 @@ public class StackList implements Stack{
 		int counter = 0;
 		
 		boolean isFound = false;
-		while(!isFound) {
-			
+		while(!isFound) {		
 			counter++;
 			Object tempE = list.getFront();
 			if(tempE==null) {isFound=true; counter=-1;}
@@ -47,11 +50,14 @@ public class StackList implements Stack{
 			}
 		}
 		
-		for(int i = 0; i < counter; i--) {
+		for(int i = tempO.size()-1; i>=0; i--) {
 			list.addFront(tempO.get(i));
 		}
 		
 		return counter;
 	}
 	
+	public String toString() {
+		return list.toString();
+	}
 }
