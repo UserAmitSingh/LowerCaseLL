@@ -1,5 +1,7 @@
 package Program12;
 
+import java.util.ArrayList;
+
 public class StackList implements Stack{
 	private LinkedList list;
 	
@@ -30,22 +32,25 @@ public class StackList implements Stack{
 
 	@Override
 	public int search(Object e) {
-		LinkedList t2 = new LinkedList();
+		ArrayList<Object> tempO = new ArrayList();
 		int counter = 0;
 		
 		boolean isFound = false;
 		while(!isFound) {
+			
 			counter++;
 			Object tempE = list.getFront();
-			t2.addFront(tempE);
-			if(tempE.equals(e)) isFound = true;
+			if(tempE==null) {isFound=true; counter=-1;}
+			else {
+				tempO.add(tempE);
+				if(tempE.equals(e)) isFound = true;
+			}
 		}
 		
-		for(int i = counter; i > 0; i--) {
-			list.addFront(t2.getBack());
+		for(int i = 0; i < counter; i--) {
+			list.addFront(tempO.get(i));
 		}
 		
-		if(counter == 0) return -1;
 		return counter;
 	}
 	
