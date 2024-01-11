@@ -16,7 +16,7 @@ public class LinkedList {
 	
 	public Object getBack() {
 		if(isEmpty()) return null;
-		ListNode tNode = start, tNode2 = tNode;
+		ListNode tNode = start, tNode2 = start;
 		while(tNode.getNext() != null) {
 			tNode = tNode.getNext();
 			if(tNode.getNext()!=null) {
@@ -35,6 +35,7 @@ public class LinkedList {
 	}
 
 	public void addBack(Object e) {
+		if(isEmpty()) {start = new ListNode(e,null); return;}
 		ListNode t = start;
 		while(t.getNext() != null) {
 			t=t.getNext();
