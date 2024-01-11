@@ -3,6 +3,10 @@ package Program12;
 public class QueueList implements Queue{
 	private LinkedList list;
 	
+	public QueueList() {
+		list = new LinkedList();
+	}
+	
 	@Override
 	public boolean isEmpty() {
 		return list.isEmpty();
@@ -17,7 +21,7 @@ public class QueueList implements Queue{
 	@Override
 	public Object enqueue(Object e) {
 		list.addBack(e);
-		return null;
+		return e;
 	}
 	
 	@Override
@@ -34,5 +38,9 @@ public class QueueList implements Queue{
 		Object tempE = list.getFront();
 		list.addFront(tempE);
 		return tempE;
+	}
+	
+	public String toString() {
+		return list.toString();
 	}
 }
