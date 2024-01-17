@@ -8,7 +8,7 @@ package Program12;
  * Class: APCSA
  * Teacher: Mr. Meinzen
  * Description: Creates a LinkedList that uses the ListNode class
- * 		to create a connection of many connected nodes.
+ * 		to create a connection of many connected listnodes.
  */
 public class LinkedList {
 	//Field Variable
