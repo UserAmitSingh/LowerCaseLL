@@ -86,12 +86,12 @@ public class StackList implements Stack{
 			//Update counter and grab Object from list
 			counter++;
 			tempE = list.getFront();
-			if(tempE!=null) {isFound = true; counter = -1;}
+			if(tempE==null) {isFound = true; counter = -1;}
 			else {
-				if(tempE.equals(e)) { isFound = true;}
-				//Adds the Object taken from list into the temporary list
-				tempList.addFront(tempE);
+				if(tempE.equals(e)) { isFound = true;}	
 			}
+			//Adds the Object taken from list into the temporary list
+			tempList.addFront(tempE);
 		}
 		
 		//Add the objects taken from list back
