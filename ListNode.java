@@ -9,8 +9,7 @@ package Program12;
  * Description: Creates a ListNode class that holds an object and another
  * 		ListNode.
  */
-public class ListNode 
-{
+public class ListNode {
 	
 	//Field Variables
 	private Object element;
@@ -20,8 +19,7 @@ public class ListNode
 	 * The ListNode() method is a constructor method that
 	 * instantiates the field variables element and next.
 	 */
-	public ListNode(Object e, ListNode n) 
-	{
+	public ListNode(Object e, ListNode n) {
 		element = e;
 		next = n;
 	}
