@@ -29,6 +29,7 @@ public class Driver {
 		System.out.println(qL.enqueue("Singh"));
 		print();
 		System.out.println(sL.search("Amit"));
+		System.out.println(sL.peek());
 		System.out.println(qL.getBack());
 		System.out.println(qL.getFront());
 		print();
