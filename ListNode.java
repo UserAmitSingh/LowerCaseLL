@@ -27,22 +27,25 @@ public class ListNode {
 	 * The getElement() method is a method that
 	 * gives the field variable element.
 	 */
-	public Object getElement() { return element;}
+	public Object getElement() {return element;}
+	
 	/**
 	 * The getNext() method is a method that
 	 * gives the field variable next.
 	 */
-	public ListNode getNext() { return next;}
+	public ListNode getNext() {return next;}
+	
 	/**
 	 * The setElement() method is a method that
 	 * sets the value of the field variable element
 	 * with the Object parameter e.
 	 */
-	public void setElement(Object e) { element = e;}
+	public void setElement(Object e) {element = e;}
+	
 	/**
 	 * The setNext() method is a method that
 	 * sets the value of the field variable next
 	 * with the ListNode parameter n.
 	 */
-	public void setNext(ListNode n) { next = n;}
+	public void setNext(ListNode n) {next = n;}
 }
